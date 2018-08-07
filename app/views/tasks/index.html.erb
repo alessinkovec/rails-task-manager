@@ -2,7 +2,7 @@
 <ul class="funky">
 <% @tasks.each do |task| %>
   <li>
-    <h2><%= link_to task.title, task %></h2>
+    <h2><%= link_to task.title.capitalize, task %></h2>
     <p>
     <%= task.completed ? "[x] Task is completed" : "[ ] Task is yet to be completed" %>
     </p>
