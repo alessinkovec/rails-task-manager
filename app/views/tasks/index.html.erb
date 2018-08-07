@@ -1,4 +1,6 @@
 <h1>My tasks</h1>
+<h3><%= link_to "Add a new task, broshamus", tasks_new_path %></h3>
+<br>
 <ul class="funky">
 <% @tasks.each do |task| %>
   <li>
@@ -6,6 +8,11 @@
     <p>
     <%= task.completed ? "[x] Task is completed" : "[ ] Task is yet to be completed" %>
     </p>
+    <p>
+      <strong><%= link_to "DESTRRROOOY IT!!!!", task, method: 'delete', data: { confirm: "Are you totally unequivocally sure broshamus?" } %></strong>
+    </p>
+    <br>
 <% end %>
   </li>
 </ul>
+
